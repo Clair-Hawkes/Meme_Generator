@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+div{
+    margin: 10px;
+    display: inline;
+    position: relative;
+    border-style: solid;
+    border-color:red;
+    background-color: red;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    max-width: min-content;
+}
+img{
+    max-height: 200px;
+    width: auto;
+    z-index: 1;
+}
+button{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+}
+p{
+    position: absolute;
+    color: white;
+    hyphens: auto;
+    word-break: break-all;
+}
+.upper{
+    top:0;
+    z-index: 2;
+}
+.lower{
+    bottom:0;
+    z-index: 2;
+}
+.container{
+    border-style: solid;
+    height: 50%;
+}

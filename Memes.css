@@ -1,0 +1,44 @@
+body *{
+    margin: auto;
+    text-align: center;
+    border-style:solid;
+}
+h1{
+    background-color: orchid;
+}
+form{
+    border-style: solid;
+    width: auto;
+}
+label{
+    border-style: solid;
+    width: auto;
+}
+
+input{
+    width: auto;
+    border-style: solid;
+    width: 500px;
+}
+div{
+    height: 200px;
+    background-color: #FF6F61;
+}
+.left{
+    float: left;
+    height: 99vh;
+    width: 10%;
+
+}
+.right{
+    float: right;
+    height: 99vh;
+    width: 10%;
+
+}
+.orange{
+    background-color: orange;
+}
+div .left{
+    background-color: orange;
+}
