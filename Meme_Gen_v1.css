@@ -1,0 +1,48 @@
+#advertisement{
+    float: right;
+    height: 99vh;
+    width: 10%;
+    background-color: orchid;
+    border-style: solid;
+}
+#output{
+    height: 50vh;
+    border-style:solid;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+/*  */
+img{
+    height: 200px;
+    width: auto;
+}
+div{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    position: relative;
+    height: 200px;
+    margin: 10px;
+}
+.top{
+    margin: 0;
+    position: absolute;
+    top:0;
+    color: white;
+    border-style: solid;
+}
+.bottom{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    color:white;
+    border-style: solid;
+}
+.delete{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right:0
+}
