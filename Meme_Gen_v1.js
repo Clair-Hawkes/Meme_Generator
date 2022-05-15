@@ -65,9 +65,6 @@ function createMeme(urlVal,alt,tp,btm,tpsz,btmsz){
   4. Append meme to output container
   5. Clear input values;
 } else {alert('Meme Container full; Please delete 1 item')}
-
-
-
 */
 inptFrm.addEventListener('submit',function(event){
   event.preventDefault();
@@ -108,10 +105,8 @@ outPut.addEventListener('click',function(event){
 
 
 
-//Future FUncationality;
+//Future Funcationality;
 /*
 1. Valid URL;
 2. Max img width; I dont want a 200px/1000px image allowed;
-3. Previous URL button; To reload previous URL/ Alt description information
-4. Text Size;
 */

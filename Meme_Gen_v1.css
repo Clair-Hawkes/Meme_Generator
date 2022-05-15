@@ -27,6 +27,7 @@ main + h3{
     padding: 5px;
 }
 #advertisement{
+    position: relative;
     float: right;
     height: 99vh;
     width: 10%;
@@ -34,6 +35,7 @@ main + h3{
     border-style: solid;
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 span p{
     transform: rotate(-90deg);
@@ -104,11 +106,5 @@ div{
 }
 
 /* Increased functionality
-1. General formatting:
-a. Centered Text
-b. Paired Fonts
-c. Top Colors
-d. Output container border
 2. Heading add Changing color graphic
-3. Advertisment Add Expand Contracting Text Animation.
  */
