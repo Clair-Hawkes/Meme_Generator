@@ -15,31 +15,34 @@ console.log(topTxt);
 //Bottom text input
 const botTxt = document.querySelector('#bottom');
 console.log(botTxt);
-//Text size input
-const txtSize = document.querySelector('#font');
-console.log(txtSize);
+//Top text size input
+const topSize = document.querySelector('#topfont');
+console.log(topSize);
+//Bottom text size input
+const btmSize = document.querySelector('#btmfont');
+console.log(btmSize);
 //Output container variable; for created memes
 const outPut = document.querySelector('#output');
 console.log(outPut)
 
 
-function createMeme(urlVal,alt,tp,btm,sz){
+function createMeme(urlVal,alt,tp,btm,tpsz,btmsz){
   //Create div container.
   const meme = document.createElement('div');
   //Create img, set url, set alt description.
   const img = document.createElement('img');
   img.setAttribute('src',urlVal);
   img.setAttribute('alt',alt);
-  //Create top text holder, add class css format, set inner text.
+  //Create top text holder, add class css format, set inner text, set top txt size.
   const top = document.createElement('p');
   top.classList.add('top');
   top.innerText = tp;
-  top.style.fontSize = sz+'px';
-  //Create bottom text holder, add class css format, set inner text.
+  top.style.fontSize = tpsz+'px';
+  //Create bottom text holder, add class css format, set inner text, set btm txt size.
   const bottom = document.createElement('p');
   bottom.classList.add('bottom');
   bottom.innerText = btm;
-  bottom.style.fontSize = sz+'px';
+  bottom.style.fontSize = btmsz+'px';
   //Create button, add css class format.
   const button = document.createElement('button');
   console.log(button);
@@ -69,18 +72,20 @@ function createMeme(urlVal,alt,tp,btm,sz){
 inptFrm.addEventListener('submit',function(event){
   event.preventDefault();
   console.log(event);
-  //function parameter order: createMeme(url,alt,tp,btm,sz){
-  //JS const names: url, alt, topTxt, botTxt, outPut, txtSize
+  //function parameter order: createMeme(url,alt,tp,btm,tpsz,btmsz){
+  //JS const names: url, alt, topTxt, botTxt, outPut, topSize, btmSize
   console.log(outPut.childElementCount);
   if(outPut.childElementCount < 3){
     console.log(url.value);
-    const meme = createMeme(url.value,alt.value,topTxt.value,botTxt.value,txtSize.value);
+    const meme = createMeme(url.value,alt.value,topTxt.value,botTxt.value,topSize.value,btmSize.value);
     console.log(meme);
     outPut.append(meme);
     url.value = '';
     alt.value = '';
     topTxt.value = '';
     botTxt.value = '';
+    topSize.value = '30';
+    btmSize.value = '30';
   } else {
     alert("Meme Container full; Please delete 1+ item(s)");
   }
