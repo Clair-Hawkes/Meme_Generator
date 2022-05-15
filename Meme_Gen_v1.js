@@ -15,11 +15,15 @@ console.log(topTxt);
 //Bottom text input
 const botTxt = document.querySelector('#bottom');
 console.log(botTxt);
+//Text size input
+const txtSize = document.querySelector('#font');
+console.log(txtSize);
 //Output container variable; for created memes
 const outPut = document.querySelector('#output');
 console.log(outPut)
 
-function createMeme(urlVal,alt,tp,btm){
+
+function createMeme(urlVal,alt,tp,btm,sz){
   //Create div container.
   const meme = document.createElement('div');
   //Create img, set url, set alt description.
@@ -30,10 +34,12 @@ function createMeme(urlVal,alt,tp,btm){
   const top = document.createElement('p');
   top.classList.add('top');
   top.innerText = tp;
+  top.style.fontSize = sz+'px';
   //Create bottom text holder, add class css format, set inner text.
   const bottom = document.createElement('p');
   bottom.classList.add('bottom');
   bottom.innerText = btm;
+  bottom.style.fontSize = sz+'px';
   //Create button, add css class format.
   const button = document.createElement('button');
   console.log(button);
@@ -63,12 +69,12 @@ function createMeme(urlVal,alt,tp,btm){
 inptFrm.addEventListener('submit',function(event){
   event.preventDefault();
   console.log(event);
-  //function parameter order: createMeme(url,alt,tp,btm){
-  //JS const names: url, alt, topTxt, botTxt, outPut
+  //function parameter order: createMeme(url,alt,tp,btm,sz){
+  //JS const names: url, alt, topTxt, botTxt, outPut, txtSize
   console.log(outPut.childElementCount);
   if(outPut.childElementCount < 3){
     console.log(url.value);
-    const meme = createMeme(url.value,alt.value,topTxt.value,botTxt.value);
+    const meme = createMeme(url.value,alt.value,topTxt.value,botTxt.value,txtSize.value);
     console.log(meme);
     outPut.append(meme);
     url.value = '';

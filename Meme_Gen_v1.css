@@ -1,14 +1,36 @@
 *{
     font-family: Verdana,sans-serif;
+    margin: 0;
 }
-h1{
+header{
+    background-color: #E01C49;
+}
+header h1{
+    color: #E6F240;
+}
+header h2{
+    color: #0A370A;
+}
+main{
+    background-color: #F9FBE7;
+    padding: 20px;
+}
+h1, h2{
+    margin-top: 5px;
+    text-align: center;
     font-family: Georgia, serif;
+}
+main + h3{
+    background-color: #E01C49;
+    color: #E6F240;
+    text-align: center;
+    padding: 5px;
 }
 #advertisement{
     float: right;
     height: 99vh;
     width: 10%;
-    background-color: orchid;
+    background-color: rgb(218, 112, 214) ;
     border-style: solid;
     display: flex;
     align-items: center;
@@ -16,13 +38,12 @@ h1{
 span p{
     transform: rotate(-90deg);
     font-size: 20px;
-    animation-duration:3s;
+    animation-duration:6s;
     animation-name: glow;
     animation-iteration-count: infinite;
 }
 #output{
     height: 50vh;
-    border-style:solid;
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -30,10 +51,13 @@ span p{
 @keyframes glow {
     0%,100%{
         text-shadow: none;
+        font-size: 10px;
+        color: orchid;
     }
-    50%{
+    66%{
         color: white;
-        text-shadow: 2px 2px 4px #000000;
+        text-shadow: 5px 5px 8px #000000;
+        font-size: 25px;
     }
 
 }
@@ -42,6 +66,7 @@ img{
     height: 350px;
     width: auto;
 }
+
 div{
     display: flex;
     justify-content: center;
@@ -51,26 +76,29 @@ div{
     margin: 10px;
 }
 .top{
+    font-family: Impact, sans-serif;
     margin: 0;
     position: absolute;
     top:0;
     color: white;
-    border-style: solid;
     word-break: break-all;
+    margin-top: 5px;
 }
 .bottom{
+    font-family: Impact, sans-serif;
     margin: 0;
     position: absolute;
     bottom: 0;
     color:white;
-    border-style: solid;
     word-break: break-all;
+    margin-bottom: 5px;
 }
 .delete{
     margin: 0;
     position: absolute;
     top: 0;
-    right:0
+    right:0;
+    z-index: 5;
 }
 
 /* Increased functionality
