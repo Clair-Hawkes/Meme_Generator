@@ -71,6 +71,10 @@ inptFrm.addEventListener('submit',function(event){
     const meme = createMeme(url.value,alt.value,topTxt.value,botTxt.value);
     console.log(meme);
     outPut.append(meme);
+    url.value = '';
+    alt.value = '';
+    topTxt.value = '';
+    botTxt.value = '';
   } else {
     alert("Meme Container full; Please delete 1+ item(s)");
   }
@@ -90,3 +94,13 @@ outPut.addEventListener('click',function(event){
     event.target.parentElement.remove();
   }
 })
+
+
+
+//Future FUncationality;
+/*
+1. Valid URL;
+2. Max img width; I dont want a 200px/1000px image allowed;
+3. Previous URL button; To reload previous URL/ Alt description information
+4. Text Size;
+*/
