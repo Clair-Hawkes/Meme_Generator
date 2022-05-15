@@ -1,9 +1,24 @@
+*{
+    font-family: Verdana,sans-serif;
+}
+h1{
+    font-family: Georgia, serif;
+}
 #advertisement{
     float: right;
     height: 99vh;
     width: 10%;
     background-color: orchid;
     border-style: solid;
+    display: flex;
+    align-items: center;
+}
+span p{
+    transform: rotate(-90deg);
+    font-size: 20px;
+    animation-duration:3s;
+    animation-name: glow;
+    animation-iteration-count: infinite;
 }
 #output{
     height: 50vh;
@@ -12,10 +27,19 @@
     flex-direction: row;
     padding: 10px;
 }
+@keyframes glow {
+    0%,100%{
+        text-shadow: none;
+    }
+    50%{
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
 
+}
 /*  */
 img{
-    height: 200px;
+    height: 350px;
     width: auto;
 }
 div{
@@ -23,7 +47,7 @@ div{
     justify-content: center;
     border-style: solid;
     position: relative;
-    height: 200px;
+    height: 350px;
     margin: 10px;
 }
 .top{
