@@ -83,6 +83,7 @@ div{
     color: white;
     word-break: break-all;
     margin-top: 5px;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .bottom{
     font-family: Impact, sans-serif;
@@ -92,6 +93,7 @@ div{
     color:white;
     word-break: break-all;
     margin-bottom: 5px;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .delete{
     margin: 0;
